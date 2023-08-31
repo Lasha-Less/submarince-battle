@@ -39,7 +39,7 @@ public class GameBoard {
         return false;
     }
 
-    public boolean isAllSubmarinesSunk() {
+    public boolean haveAllSubmarinesSunk() {
         // Check if all submarines on the board have been sunk.
         for (Submarine sub : submarines) {
             if (!sub.isSunk()) {

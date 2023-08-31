@@ -12,9 +12,11 @@ public enum Shape {
     THREE_CELL_CURVED(3),
     FOUR_CELL_STRAIGHT(4),
     FOUR_CELL_L_SHAPED(4),
+    FOUR_CELL_FLIP_L_SHAPED(4),
     FOUR_CELL_SQUARE(4),
     FOUR_CELL_PYRAMID(4),
-    FOUR_CELL_Z_SHAPED(4);
+    FOUR_CELL_Z_SHAPED(4),
+    FOUR_CELL_FLIP_Z_SHAPED(4);
 
     private final int size;
 
