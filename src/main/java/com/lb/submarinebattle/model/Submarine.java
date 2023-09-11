@@ -7,6 +7,7 @@ public abstract class Submarine {
 
     protected ArrayList<Cell> locationCells;
     protected ArrayList<Cell> marginalSpace;
+
     protected Shape shape;
     protected Orientation orientation;
 
@@ -20,7 +21,7 @@ public abstract class Submarine {
 
     public boolean isSunk() {
         for (Cell cell : locationCells) {
-            if (!cell.isHit()) {  // Assuming Cell has a method isHit()
+            if (!cell.getHit()) {  // Assuming Cell has a method isHit()
                 return false;
             }
         }
@@ -29,5 +30,25 @@ public abstract class Submarine {
 
     public int getSize(){
         return size;
+    }
+
+    public Shape getShape() {
+        return shape;
+    }
+
+    public Orientation getOrientation() {
+        return orientation;
+    }
+
+    public ArrayList<Cell> getLocationCells() {
+        return locationCells;
+    }
+
+    public ArrayList<Cell> getMarginalSpace() {
+        return marginalSpace;
+    }
+
+    public void setLocationCells(ArrayList<Cell> locationCells) {
+        this.locationCells = locationCells;
     }
 }

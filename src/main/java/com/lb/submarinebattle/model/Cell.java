@@ -6,17 +6,22 @@ public class Cell {
     private int row;
     private int column;
     private boolean hit = false;
+    private boolean isOccupied = false;
 
     public Cell(int row, int column) {
         this.row = row;
         this.column = column;
     }
 
-    public boolean isHit() {
+    public void setHit(boolean hit) {
+        this.hit = hit;
+    }
+
+    public boolean getHit() {
         return hit;
     }
 
-    public void markAsHit() {
+    public void setAsHit() {
         this.hit = true;
     }
 
@@ -35,6 +40,16 @@ public class Cell {
     public void setColumn(int column) {
         this.column = column;
     }
+
+    public void setOccupied(boolean occupied) {
+        isOccupied = occupied;
+    }
+
+    public boolean getOccupied() {
+        return isOccupied;
+    }
+
+
 
     @Override
     public boolean equals(Object o) {
